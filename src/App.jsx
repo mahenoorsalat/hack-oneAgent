@@ -3,10 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { ArrowRight, Twitter, Shield, Zap, Wallet, BarChart2 , Github } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const navigate = useNavigate();
 
   return (
     <>
@@ -39,7 +41,7 @@ function App() {
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center">
                   <div className="rounded-md shadow">
-                    <button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                    <button   onClick={() => navigate('/BotPage')} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
                       Get Started
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </button>
